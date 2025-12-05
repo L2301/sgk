@@ -1,0 +1,20 @@
+# Core dependencies for SGK Attention Experiments
+
+# Deep Learning Framework
+torch>=2.0.0
+
+# Numerical Computing
+numpy>=1.24.0
+
+# Scientific Computing (sparse matrices, SVD)
+scipy>=1.10.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# HuggingFace Datasets (for FineWeb dataset)
+datasets>=2.14.0
+
+# Tokenization
+tiktoken>=0.5.0
+
