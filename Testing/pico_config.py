@@ -26,13 +26,13 @@ class PicoModelConfig:
     """Scaled-down model configuration for testing."""
     
     # Architecture - tiny version
-    n_layers: int = 2
-    n_heads: int = 2
-    embedding_dim: int = 128
+    n_layers: int = 12
+    n_heads: int = 12
+    embedding_dim: int = 768
     head_dim: int = 64  # embedding_dim // n_heads
     
     # MLP
-    mlp_dim: int = 512  # 4 * embedding_dim
+    mlp_dim: int = 3072  # 4 * embedding_dim
     mlp_activation: str = "gelu"
     
     # Vocabulary and sequence (CHARACTER-LEVEL for testing)
