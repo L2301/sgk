@@ -1,0 +1,35 @@
+{
+  "n_layers": 4,
+  "n_heads": 4,
+  "embedding_dim": 256,
+  "head_dim": 64,
+  "mlp_dim": 1024,
+  "max_seq_len": 128,
+  "vocab_size": 85,
+  "dropout": 0.1,
+  "layer_norm_eps": 1e-05,
+  "batch_size": 8,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.1,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "max_grad_norm": 1.0,
+  "warmup_steps": 100,
+  "max_steps": 200,
+  "log_interval": 10,
+  "eval_interval": 50,
+  "max_n": 2,
+  "max_s": 3,
+  "train_texts": 20,
+  "val_texts": 5,
+  "test_texts": 5,
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1000
+  ]
+}

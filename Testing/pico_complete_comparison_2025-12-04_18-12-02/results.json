@@ -1,0 +1,295 @@
+{
+  "config": {
+    "n_layers": 2,
+    "n_heads": 2,
+    "embedding_dim": 128,
+    "head_dim": 64,
+    "mlp_dim": 512,
+    "mlp_activation": "gelu",
+    "vocab_size": 85,
+    "max_seq_len": 256,
+    "mlp_dropout": 0.1,
+    "embed_dropout": 0.1,
+    "attn_dropout": 0.1,
+    "layer_norm_eps": 1e-05
+  },
+  "training_config": {
+    "num_chunks": 20,
+    "test_chunks": 5,
+    "batch_size": 4,
+    "learning_rate": 0.001,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "max_grad_norm": 1.0,
+    "warmup_steps": 50,
+    "max_steps": 500,
+    "snapshot_interval": 200,
+    "eval_interval": 100,
+    "log_interval": 20,
+    "max_n": 2,
+    "max_s": 1
+  },
+  "models": {
+    "sparse": {
+      "total_params": 570752,
+      "trainable_params": 264704,
+      "final_loss": 3.799557638168335,
+      "final_perplexity": 44.68141476845901,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 3.863051652908325,
+          "eval_loss": 3.795378017425537,
+          "eval_perplexity": 44.495053132254796,
+          "lr": 0.0009698463103929542
+        },
+        {
+          "step": 200,
+          "train_loss": 3.75052547454834,
+          "eval_loss": 3.7601281642913817,
+          "eval_perplexity": 42.95393078609688,
+          "lr": 0.00075
+        },
+        {
+          "step": 300,
+          "train_loss": 3.6721599102020264,
+          "eval_loss": 3.7748319149017333,
+          "eval_perplexity": 43.590180840091044,
+          "lr": 0.00041317591116653486
+        },
+        {
+          "step": 400,
+          "train_loss": 3.6156957149505615,
+          "eval_loss": 3.7986732959747314,
+          "eval_perplexity": 44.64191857475868,
+          "lr": 0.00011697777844051105
+        },
+        {
+          "step": 500,
+          "train_loss": 3.588608741760254,
+          "eval_loss": 3.799557638168335,
+          "eval_perplexity": 44.68141476845901,
+          "lr": 0.0
+        }
+      ]
+    },
+    "sinusoidal": {
+      "total_params": 701568,
+      "trainable_params": 264704,
+      "final_loss": 3.762336540222168,
+      "final_perplexity": 43.04889403165641,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 3.9235787391662598,
+          "eval_loss": 3.866928815841675,
+          "eval_perplexity": 47.79537205330682,
+          "lr": 0.0009698463103929542
+        },
+        {
+          "step": 200,
+          "train_loss": 3.8729593753814697,
+          "eval_loss": 3.811887502670288,
+          "eval_perplexity": 45.23574091884431,
+          "lr": 0.00075
+        },
+        {
+          "step": 300,
+          "train_loss": 3.8377418518066406,
+          "eval_loss": 3.778698682785034,
+          "eval_perplexity": 43.75906024970722,
+          "lr": 0.00041317591116653486
+        },
+        {
+          "step": 400,
+          "train_loss": 3.8251960277557373,
+          "eval_loss": 3.764385223388672,
+          "eval_perplexity": 43.13717797823523,
+          "lr": 0.00011697777844051105
+        },
+        {
+          "step": 500,
+          "train_loss": 3.8188021183013916,
+          "eval_loss": 3.762336540222168,
+          "eval_perplexity": 43.04889403165641,
+          "lr": 0.0
+        }
+      ]
+    },
+    "sinusoidal_gk": {
+      "total_params": 570496,
+      "trainable_params": 264704,
+      "final_loss": 3.4851479053497316,
+      "final_perplexity": 32.62725249819178,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 3.197608232498169,
+          "eval_loss": 3.0961090564727782,
+          "eval_perplexity": 22.111748121155408,
+          "lr": 0.0009698463103929542
+        },
+        {
+          "step": 200,
+          "train_loss": 3.201192855834961,
+          "eval_loss": 3.147750425338745,
+          "eval_perplexity": 23.283627364198647,
+          "lr": 0.00075
+        },
+        {
+          "step": 300,
+          "train_loss": 3.3498334884643555,
+          "eval_loss": 3.4443341732025146,
+          "eval_perplexity": 31.32242119472334,
+          "lr": 0.00041317591116653486
+        },
+        {
+          "step": 400,
+          "train_loss": 3.229713201522827,
+          "eval_loss": 3.4226556777954102,
+          "eval_perplexity": 30.650705430532124,
+          "lr": 0.00011697777844051105
+        },
+        {
+          "step": 500,
+          "train_loss": 3.304098606109619,
+          "eval_loss": 3.4851479053497316,
+          "eval_perplexity": 32.62725249819178,
+          "lr": 0.0
+        }
+      ]
+    },
+    "rope": {
+      "total_params": 701632,
+      "trainable_params": 264704,
+      "final_loss": 3.8608547687530517,
+      "final_perplexity": 47.50594061279365,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 3.8966479301452637,
+          "eval_loss": 3.915995788574219,
+          "eval_perplexity": 50.19903425549166,
+          "lr": 0.0009698463103929542
+        },
+        {
+          "step": 200,
+          "train_loss": 3.852226972579956,
+          "eval_loss": 3.8789507865905763,
+          "eval_perplexity": 48.37343438010109,
+          "lr": 0.00075
+        },
+        {
+          "step": 300,
+          "train_loss": 3.7379555702209473,
+          "eval_loss": 3.8961554527282716,
+          "eval_perplexity": 49.21288368470547,
+          "lr": 0.00041317591116653486
+        },
+        {
+          "step": 400,
+          "train_loss": 3.605116605758667,
+          "eval_loss": 3.8805360317230226,
+          "eval_perplexity": 48.45017894489414,
+          "lr": 0.00011697777844051105
+        },
+        {
+          "step": 500,
+          "train_loss": 3.564619779586792,
+          "eval_loss": 3.8608547687530517,
+          "eval_perplexity": 47.50594061279365,
+          "lr": 0.0
+        }
+      ]
+    },
+    "trainable": {
+      "total_params": 439424,
+      "trainable_params": 439424,
+      "final_loss": 4.963290500640869,
+      "final_perplexity": 143.06377368081868,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 3.2998266220092773,
+          "eval_loss": 3.514327812194824,
+          "eval_perplexity": 33.59333929986198,
+          "lr": 0.0009698463103929542
+        },
+        {
+          "step": 200,
+          "train_loss": 3.1868858337402344,
+          "eval_loss": 4.400999927520752,
+          "eval_perplexity": 81.53235436324204,
+          "lr": 0.00075
+        },
+        {
+          "step": 300,
+          "train_loss": 2.418405532836914,
+          "eval_loss": 4.729524612426758,
+          "eval_perplexity": 113.24171584620898,
+          "lr": 0.00041317591116653486
+        },
+        {
+          "step": 400,
+          "train_loss": 1.7786110639572144,
+          "eval_loss": 4.9724555015563965,
+          "eval_perplexity": 144.38098017682333,
+          "lr": 0.00011697777844051105
+        },
+        {
+          "step": 500,
+          "train_loss": 1.6524481773376465,
+          "eval_loss": 4.963290500640869,
+          "eval_perplexity": 143.06377368081868,
+          "lr": 0.0
+        }
+      ]
+    },
+    "zero": {
+      "total_params": 570752,
+      "trainable_params": 264704,
+      "final_loss": 3.758343744277954,
+      "final_perplexity": 42.87735127767059,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 3.9289212226867676,
+          "eval_loss": 3.8595266819000242,
+          "eval_perplexity": 47.44289047492209,
+          "lr": 0.0009698463103929542
+        },
+        {
+          "step": 200,
+          "train_loss": 3.8491618633270264,
+          "eval_loss": 3.7928833961486816,
+          "eval_perplexity": 44.384193160310026,
+          "lr": 0.00075
+        },
+        {
+          "step": 300,
+          "train_loss": 3.7897419929504395,
+          "eval_loss": 3.77244348526001,
+          "eval_perplexity": 43.486192993346314,
+          "lr": 0.00041317591116653486
+        },
+        {
+          "step": 400,
+          "train_loss": 3.73634672164917,
+          "eval_loss": 3.7623694896698,
+          "eval_perplexity": 43.05031249230454,
+          "lr": 0.00011697777844051105
+        },
+        {
+          "step": 500,
+          "train_loss": 3.712299108505249,
+          "eval_loss": 3.758343744277954,
+          "eval_perplexity": 42.87735127767059,
+          "lr": 0.0
+        }
+      ]
+    }
+  }
+}

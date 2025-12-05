@@ -1,0 +1,32 @@
+# Proposed fix for pico_sparse.py
+# Add use_random_embeddings parameter to compute_pico_weights()
+
+--- a/Testing/pico_sparse.py
++++ b/Testing/pico_sparse.py
+@@ -177,6 +177,7 @@ def compute_pico_weights(
+     config: PicoModelConfig,
+     training_config: PicoTrainingConfig,
+     local_texts: List[str],
++    use_random_embeddings: bool = False,
+ ) -> Dict[int, Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]]:
+     """
+     Compute attention weights for PicoGPT using our method.
+@@ -215,9 +216,14 @@ def compute_pico_weights(
+     print("  Building manifold matrices...")
+     manifold_matrices = build_all_manifold_matrices(count_matrices)
+     
+-    # Load base embeddings
+-    print("  Loading GPT-2 embeddings...")
+-    base_embeddings = load_gpt2_embeddings()
++    # Load or generate base embeddings
++    if use_random_embeddings:
++        print("  Using random embeddings (fast mode)...")
++        import numpy as np
++        base_embeddings = np.random.randn(VOCAB_SIZE, 768).astype(np.float32)
++    else:
++        print("  Loading GPT-2 embeddings...")
++        base_embeddings = load_gpt2_embeddings()
+     
+     # Build n-gram embeddings
+     print("  Building embedding matrices...")
+
